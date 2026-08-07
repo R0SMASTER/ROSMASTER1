@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Честная стоимость ремонта в Москве — РосМастер</title>
+    <link rel="canonical" href="https://rosmaster.pro/prices.html">
+    <meta name="description" content="Честные цены на ремонт квартир в Москве и МО от РосМастер. Фиксированная смета в договоре, без скрытых доплат. Косметический и комплексный ремонт.">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="РосМастер">
+    <meta property="og:title" content="Честная стоимость ремонта в Москве — РосМастер">
+    <meta property="og:description" content="Честные цены на ремонт квартир в Москве и МО от РосМастер. Фиксированная смета в договоре, без скрытых доплат. Косметический и комплексный ремонт.">
+    <meta property="og:url" content="https://rosmaster.pro/prices.html">
+    <meta property="og:image" content="https://rosmaster.pro/logo.webp">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        :root { --primary: #1a2a6c; --secondary: #0d1b4a; --gold: #f2a900; --bg: #f4f7f6; --white: #ffffff; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: var(--bg); color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
+        nav { background-color: var(--secondary); padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); height: 70px; }
+        .logo-img { height: 50px; cursor: pointer; }
+        .nav-links a { color: white; margin-left: 20px; text-decoration: none; font-weight: 600; font-size: 0.85em; }
+        
+        .container { max-width: 1200px; margin: auto; padding: 40px 20px; flex: 1; }
+        h1 { text-align: center; color: var(--secondary); margin-bottom: 50px; font-size: 2.5em; }
+        
+        .price-table-container { background: white; border-radius: 25px; padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 60px; overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; min-width: 600px; }
+        th { background: #f8f9fa; padding: 18px; text-align: left; color: var(--primary); font-weight: 800; border-bottom: 3px solid var(--gold); }
+        td { padding: 15px 18px; border-bottom: 1px solid #eee; font-size: 0.95em; }
+        .cat-row { background: #eef2f3; font-weight: bold; color: var(--primary); }
+        .rms-price-cell { color: var(--gold); font-weight: bold; }
+
+        .price-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+        .price-card { background: white; border-radius: 20px; padding: 35px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: center; display: flex; flex-direction: column; justify-content: space-between; min-height: 650px; transition: 0.3s; border: 1px solid transparent; }
+        .price-card:hover { transform: translateY(-5px); border-color: var(--gold); }
+        .price-card.popular { border: 2px solid var(--gold); position: relative; }
+        .price-card.popular::after { content: "ПОПУЛЯРНО"; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--primary); padding: 5px 15px; border-radius: 20px; font-size: 0.7em; font-weight: bold; }
+        
+        .price-card h3 { color: var(--primary); font-size: 1.6em; margin-top: 0; }
+        .price-val { font-size: 2em; font-weight: 900; color: var(--primary); margin: 15px 0; }
+        .price-val span { font-size: 0.4em; color: #666; font-weight: normal; }
+        .rms-price { background: #f0f4f8; padding: 12px; border-radius: 12px; color: var(--gold); font-weight: 800; margin-bottom: 25px; font-size: 0.9em; }
+        
+        .price-card ul { list-style: none; padding: 0; margin-bottom: 30px; text-align: left; flex-grow: 1; }
+        .price-card li { margin-bottom: 10px; padding-left: 25px; position: relative; font-size: 0.9em; line-height: 1.4; }
+        .price-card li::before { content: "✓"; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+        
+        .btn { padding: 15px 25px; border-radius: 50px; font-weight: bold; display: inline-block; background: var(--gold); color: var(--primary); width: 100%; text-decoration: none; text-align: center; }
+
+        .floating-contacts { position: fixed; bottom: 30px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 15px; }
+        .contact-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s; cursor: pointer; text-decoration: none; }
+        .contact-icon:hover { transform: scale(1.1); }
+        .whatsapp { background: #25D366; }
+        .telegram { background: #0088cc; }
+        .contact-icon svg { width: 35px; height: 35px; fill: white; }
+
+        footer { background: var(--secondary); color: white; padding: 80px 5%; text-align: center; margin-top: auto; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; max-width: 1200px; margin: auto; }
+        .footer-links a, .footer-links span { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; cursor: pointer; font-size: 0.9em; }
+        .footer-links a:hover, .footer-links span:hover { color: var(--gold); }
+
+        @media (max-width: 768px) { 
+            .footer-grid { grid-template-columns: 1fr; text-align: center; } 
+            h1 { font-size: 1.8em; }
+            .price-card { min-height: auto; }
+            .floating-contacts { bottom: 20px; right: 15px; }
+            .contact-icon { width: 50px; height: 50px; }
+        }
+    </style>
+</head>
+<body>
+<nav><a href="index.html"><img src="./logo.webp" class="logo-img" alt="РОСМАСТЕР"></a><div class="nav-links"><a href="index.html">Главная</a><a href="workflow.html">Этапы</a><a href="portfolio.html">Работы</a></div></nav>
+
+<div class="container">
+    <h1>Честная стоимость ремонта в Москве</h1>
+    
+    <div class="price-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Наименование работ</th>
+                    <th>Ед. изм.</th>
+                    <th>Цена (руб)</th>
+                    <th>С баллами RMS (-20%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="cat-row"><td colspan="4">ЧЕРНОВЫЕ РАБОТЫ</td></tr>
+                <tr><td>Демонтаж старых покрытий (стены)</td><td>м²</td><td>от 250</td><td class="rms-price-cell">от 200</td></tr>
+                <tr><td>Грунтовка стен и потолка</td><td>м²</td><td>от 100</td><td class="rms-price-cell">от 80</td></tr>
+                <tr><td>Штукатурка стен по маякам</td><td>м²</td><td>от 550</td><td class="rms-price-cell">от 440</td></tr>
+                <tr><td>Устройство стяжки пола</td><td>м²</td><td>от 600</td><td class="rms-price-cell">от 480</td></tr>
+                <tr><td>Возведение перегородок (ГКЛ/ПГП)</td><td>м²</td><td>от 800</td><td class="rms-price-cell">от 640</td></tr>
+                
+                <tr class="cat-row"><td colspan="4">ИНЖЕНЕРНЫЕ СИСТЕМЫ</td></tr>
+                <tr><td>Разводка труб ГВС/ХВС (точка)</td><td>шт.</td><td>от 3 500</td><td class="rms-price-cell">от 2 800</td></tr>
+                <tr><td>Монтаж инсталляции унитаза</td><td>шт.</td><td>от 4 500</td><td class="rms-price-cell">от 3 600</td></tr>
+                <tr><td>Электромонтажные работы (точка)</td><td>шт.</td><td>от 1 500</td><td class="rms-price-cell">от 1 200</td></tr>
+                <tr><td>Сборка и монтаж электрощита</td><td>шт.</td><td>от 8 000</td><td class="rms-price-cell">от 6 400</td></tr>
+                <tr><td>Установка радиатора отопления</td><td>шт.</td><td>от 4 000</td><td class="rms-price-cell">от 3 200</td></tr>
+
+                <tr class="cat-row"><td colspan="4">ЧИСТОВАЯ ОТДЕЛКА</td></tr>
+                <tr><td>Оклейка стен обоями</td><td>м²</td><td>от 400</td><td class="rms-price-cell">от 320</td></tr>
+                <tr><td>Покраска стен в 2 слоя</td><td>м²</td><td>от 450</td><td class="rms-price-cell">от 360</td></tr>
+                <tr><td>Укладка ламината</td><td>м²</td><td>от 500</td><td class="rms-price-cell">от 400</td></tr>
+                <tr><td>Укладка керамогранита (стандарт)</td><td>м²</td><td>от 1 200</td><td class="rms-price-cell">от 960</td></tr>
+                <tr><td>Монтаж напольного плинтуса</td><td>м.п.</td><td>от 200</td><td class="rms-price-cell">от 160</td></tr>
+                <tr><td>Установка межкомнатной двери</td><td>шт.</td><td>от 3 500</td><td class="rms-price-cell">от 2 800</td></tr>
+                
+                <tr class="cat-row"><td colspan="4">БЛАГОУСТРОЙСТВО И ТЕХНОЛОГИИ</td></tr>
+                <tr><td>Террасы и навесы под ключ</td><td>объект</td><td>от 200 000</td><td class="rms-price-cell">от 160 000</td></tr>
+                <tr><td>Умный дом последнего поколения</td><td>проект</td><td>от 350 000</td><td class="rms-price-cell">от 280 000</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="price-grid">
+        <div class="price-card">
+            <div>
+                <h3>Косметический</h3>
+                <div class="price-val">ОТ 8 500 <span>руб/м²</span></div>
+                <div class="rms-price">Доплата баллами RMS до 20%</div>
+                <ul>
+                    <li>Поклейка обоев и/или покраска стен</li>
+                    <li>Укладка ламината или линолеума</li>
+                    <li>Монтаж напольных плинтусов</li>
+                    <li>Покраска или натяжной потолок</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Вызвать замерщика</a>
+        </div>
+        <div class="price-card popular">
+            <div>
+                <h3>Комфорт-класс</h3>
+                <div class="price-val">ОТ 16 000 <span>руб/м²</span></div>
+                <div class="rms-price">Доплата баллами RMS до 25%</div>
+                <ul>
+                    <li>Выравнивание стен и пола (стяжка)</li>
+                    <li>Монтаж натяжных потолков</li>
+                    <li>Разводка электрики и сантехники</li>
+                    <li>Полная отделка санузла плиткой</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Вызвать замерщика</a>
+        </div>
+        <div class="price-card">
+            <div>
+                <h3>Капитальный</h3>
+                <div class="price-val">ОТ 25 000 <span>руб/м²</span></div>
+                <div class="rms-price">Доплата баллами RMS до 30%</div>
+                <ul>
+                    <li>Демонтажные работы и перепланировка</li>
+                    <li>Полная замена всех коммуникаций</li>
+                    <li>Многоуровневые гипсокартонные потолки</li>
+                    <li>Декоративная штукатурка или покраска</li>
+                    <li>Дизайн проект и цифровой паспорт в подарок</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Вызвать замерщика</a>
+        </div>
+        <div class="price-card">
+            <div>
+                <h3>Террасы и навесы</h3>
+                <div class="price-val">ОТ 200 000 <span>руб.</span></div>
+                <div class="rms-price">Доплата баллами RMS до 20%</div>
+                <ul>
+                    <li>Индивидуальное проектирование</li>
+                    <li>Каркас из металла или дерева</li>
+                    <li>Настил из ДПК или лиственницы</li>
+                    <li>Монтаж кровли и водостоков</li>
+                    <li>Гарантия на конструкцию 5 лет</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Заказать расчет</a>
+        </div>
+        <div class="price-card">
+            <div>
+                <h3>Умный дом</h3>
+                <div class="price-val">ОТ 350 000 <span>руб.</span></div>
+                <div class="rms-price">Доплата баллами RMS до 30%</div>
+                <ul>
+                    <li>Системы последнего поколения</li>
+                    <li>Управление освещением и климатом</li>
+                    <li>Системы безопасности и контроля</li>
+                    <li>Голосовое управление (Алиса/Siri)</li>
+                    <li>Настройка сценариев под ключ</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Заказать проект</a>
+        </div>
+        <div class="price-card">
+            <div>
+                <h3>Мастер на час</h3>
+                <div class="price-val">ОТ 5 000 <span>руб.</span></div>
+                <div class="rms-price">Доплата баллами RMS до 50%</div>
+                <ul>
+                    <li>Монтаж раковины/ванной/унитаза</li>
+                    <li>Монтаж розетки/выключателя/люстры</li>
+                    <li>Монтаж двери/ручки/замка</li>
+                    <li>Покраска стен/поклейка обоев</li>
+                    <li>Укладка напольных покрытий</li>
+                    <li>И многое другое...</li>
+                </ul>
+            </div>
+            <a href="index.html" class="btn">Вызвать мастера</a>
+        </div>
+    </div>
+</div>
+
+<div class="floating-contacts">
+    <a href="https://wa.me/79015056088" target="_blank" class="contact-icon whatsapp" title="Написать в WhatsApp">
+        <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.4-8.9-93.5-25.7l-6.7-4-69.5 18.2 18.5-67.8-4.4-7.1c-18.5-29.2-28.2-63-28.2-98 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.6-30.6-38.2-3.2-5.6-.3-8.6 2.5-11.3 2.5-2.6 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+    <a href="https://t.me/R0SMASTER" target="_blank" class="contact-icon telegram" title="Написать в Telegram">
+        <svg viewBox="0 0 448 512"><path d="M446.7 98.6l-67.6 318.8c-5.1 22.5-19.6 28.1-38.5 15.4l-102.8-75.8-49.6 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.8L21.7 289.4c-21.9 6.8-22 19.1-3.6 25.2l73.5 23 170.3-107.4c8-4.8 15.3-2.2 9.3 3.1L133.4 366.4l-1.5 52.8c5.2 0 9.5-2.4 12.4-5.3l25.4-24.7 52.9 39.1c9.7 5.4 16.7 2.6 19.1-9.1l87.1-410.7c3.5-14.4-5.6-24.3-22.1-17.4z"/></svg>
+    </a>
+</div>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-links">
+            <h4 style="color:white">Навигация</h4>
+            <a href="about.html">О проекте</a>
+            <a href="prices.html">Цены</a>
+            <a href="workflow.html">Этапы работы</a>
+            <a href="faq.html">Вопросы</a>
+        </div>
+        <div class="footer-links">
+            <h4 style="color:white">Для партнеров</h4>
+            <a href="RosMaster_Whitepaper.txt" download>Whitepaper (Баллы RMS)</a>
+            <a href="https://rosmaster.tech" target="_blank">Технологический портал</a>
+            <a href="privacy.html">Политика</a>
+        </div>
+        <div class="footer-links">
+            <h4 style="color:white">Контакты</h4>
+            <p style="color:#ccc; font-size:0.9em;">Москва, ул. Полянка, 42</p>
+            <a href="https://t.me/R0SMASTER" target="_blank"><img src="telegram_qr.webp" alt="Telegram @R0SMASTER" style="width:100px;border-radius:10px;margin-top:10px;"></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function openModal(id) { document.getElementById(id).style.display = 'block'; document.body.style.overflow = 'hidden'; }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; document.body.style.overflow = 'auto'; }
+</script>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a24745644b7cf304',t:'MTc4NTYxMjc2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2480ad96889dc96',t:'MTc4NTYyMDg1Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
