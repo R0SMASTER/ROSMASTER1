@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>РосМастер — Ремонт квартир и отделка под ключ в Москве и МО</title>
-    <link rel="canonical" href="https://rosmaster.pro/">
+    <link rel="canonical" href="https://rosmaster.moscow/">
     <meta property="og:title" content="РосМастер — Ремонт квартир и отделка под ключ в Москве и МО">
     <meta property="og:description" content="Сервис профессионального ремонта квартир и строительства на севере Москвы. Скидка 20% по программе лояльности RMS. Гарантия качества, прозрачные сметы.">
-    <meta property="og:url" content="https://rosmaster.pro/">
-    <meta property="og:image" content="https://rosmaster.pro/logo.webp">
+    <meta property="og:url" content="https://rosmaster.moscow/">
+    <meta property="og:image" content="https://rosmaster.moscow/logo.webp">
     <meta name="description" content="Сервис профессионального ремонта квартир и строительства на севере Москвы. Скидка 20% по программе лояльности RMS. Гарантия качества, прозрачные сметы.">
     <meta name="keywords" content="ремонт квартир москва, отделка квартир под ключ, ремонт санузла, мастер на час москва, росмастер, баллы rms">
     
@@ -24,9 +24,9 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "РосМастер",
-      "image": "https://rosmaster.pro/logo.webp",
+      "image": "https://rosmaster.moscow/logo.webp",
       "telephone": "+79015056088",
-      "url": "https://rosmaster.pro",
+      "url": "https://rosmaster.moscow",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Москва",
@@ -497,11 +497,9 @@
         
         const text = `🧮 НОВЫЙ РАСЧЕТ ИЗ КАЛЬКУЛЯТОРА!\n\n🛠️ Услуга: ${serviceName}\n📏 Параметры: ${inputVal}\n💎 Баллы RMS: ${isRms}\n💰 Итоговая сумма: ${result}\n\nПожалуйста, свяжитесь с клиентом для подтверждения.`;
         
-        try {
-            await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: text }) });
-            closeModal('calcModal');
-            window.location.href = "thanks.html";
-        } catch (error) { alert('Ошибка отправки. Попробуйте позже.'); }
+        window.open('https://wa.me/79015056088?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        closeModal('calcModal');
+        window.location.href = "thanks.html";
     }
 
     // Инициализация калькулятора при открытии
@@ -527,10 +525,8 @@
         const phone = document.getElementById('clientPhone').value;
         const type = document.getElementById('workType').value;
         const text = `🔔 НОВАЯ ЗАЯВКА РОСМАСТЕР!\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n🛠️ Услуга: ${type}`;
-        try {
-            await fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text: text }) });
-            window.location.href = "thanks.html";
-        } catch (error) { alert('Ошибка отправки. Попробуйте позже.'); }
+        window.open('https://wa.me/79015056088?text=' + encodeURIComponent(text), '_blank', 'noopener');
+        window.location.href = "thanks.html";
     };
 
     async function connectWallet() {
@@ -548,5 +544,5 @@
         }
     }
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a23721c08e98e604',t:'MTc4NTQ0MzUzOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a245c33a5bc582ea',t:'MTc4NTU5Njk1Mg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a24743a01d55f304',t:'MTc4NTYxMjY5Nw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2480a5febb8dc96',t:'MTc4NTYyMDgzOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>

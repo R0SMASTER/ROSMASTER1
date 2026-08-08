@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://rosmaster.pro/sitemap.xml
+Sitemap: https://rosmaster.moscow/sitemap.xml
